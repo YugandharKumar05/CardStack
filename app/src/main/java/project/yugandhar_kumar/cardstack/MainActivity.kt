@@ -106,10 +106,8 @@ fun CardStack() {
                         .height(200.dp)
                         .padding(horizontal = 32.dp, vertical = 64.dp / (i + 1))
                         .graphicsLayer {
-
                             rotationX = cardRotation
-
-                            translationY = with(density) { cardOffsetY.toPx() * i }
+                             translationY = with(density) { cardOffsetY.toPx() * i }
                             scaleX = cardScale
                             scaleY = cardScale
                         }
@@ -129,7 +127,6 @@ fun CardStack() {
                 }
             }
         }
-
     }
 }
 
