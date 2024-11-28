@@ -84,12 +84,10 @@ fun CardStack() {
             for (i in numberOfCards - 1 downTo 0) {
                 val colors = CardDefaults.cardColors(containerColor = cardColors[i])
 
-
                 val offsetY = animateDpAsState(
                     targetValue = if (i == selectedCard) (-75).dp else (i * 16).dp,
                     animationSpec = spring(), label = ""
                 )
-
 
                 val interactionSource = remember { MutableInteractionSource() }
                 val noRippleClickable = Modifier.clickable(
@@ -97,7 +95,6 @@ fun CardStack() {
                     indication = null,
                     onClick = { selectedCard = i }
                 )
-
 
                 RotatingCard(
                     modifier = Modifier
